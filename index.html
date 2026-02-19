@@ -1,27 +1,77 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Bootstrap CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="style/style.css" />
+    <style>
+      .hero-section {
+        position: relative;
+        height: calc(100vh - 56px);
+        min-height: 520px;
+        overflow: hidden;
+        margin-top: 56px;
+      }
 
+      .hero-section .carousel-inner,
+      .hero-section .carousel-item {
+        height: 100%;
+      }
+
+      .hero-section .carousel-item img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.25));
+        z-index: 1;
+      }
+
+      .hero-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        color: #fff;
+        text-align: center;
+        padding: 0 1rem;
+      }
+
+      @media (max-width: 768px) {
+        .hero-content h1 {
+          font-size: 1.75rem;
+        }
+      }
+    </style>
     <title>Bali Tourism</title>
-</head>
-<body>
+  </head>
 
-<!-- ===================== NAVBAR ===================== -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm hover-nav">
-    <div class="container-fluid px-5">
-
+  <body>
+    <!-- ===================== NAVBAR ===================== -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top"
+    >
+      <div class="container-fluid px-5">
         <!-- Logo / Brand -->
-        <a class="navbar-brand fw-bold text-success" href="#">
-            Bali Tourism
-        </a>
+        <a class="navbar-brand fw-bold text-success" href="#"> Bali Tourism </a>
 
         <!-- Toggle untuk tampilan mobile -->
         <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -30,53 +80,409 @@
 
         <!-- Menu navigasi -->
         <div class="collapse navbar-collapse" id="navbarNav">
-            <!-- ms-auto = dorong menu ke kanan -->
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Kategori Wisata</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About Us</a>
-                </li>
-            </ul>
+          <!-- ms-auto = dorong menu ke kanan -->
+          <ul class="navbar-nav ms-auto gap-3">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Kategori Wisata</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+          </ul>
         </div>
-    </div>
-</nav>
+      </div>
+    </nav>
 
+    <!-- ===================== HERO SECTION ===================== -->
+    <section class="hero-section">
+      <div
+        id="heroCarousel"
+        class="carousel slide carousel-fade"
+        data-bs-ride="carousel"
+        data-bs-interval="5000"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
 
-<!-- ===================== HERO SECTION ===================== -->
-<section class="hero-section d-flex align-items-center text-white text-center">
-    <!-- 
-        d-flex = aktifkan flexbox
-        align-items-center = posisi vertikal di tengah
-        text-center = teks rata tengah
-    -->
-    <div class="container">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="asset/img/bali.jpg"
+              class="d-block w-100"
+              alt="Pantai Bali"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="asset/img/bali2.jpg"
+              class="d-block w-100"
+              alt="Pemandangan Bali"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="asset/img/bali3.jpg"
+              class="d-block w-100"
+              alt="Sawah Terasering Bali"
+            />
+          </div>
+        </div>
 
-        <!-- display-4 = ukuran besar khas Bootstrap -->
-        <h1 class="display-4 fw-bold">
-            Selamat Datang di Bali
-        </h1>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
 
-        <!-- lead = ukuran paragraf sedikit lebih besar -->
-        <p class="lead mb-4">
-            Jelajahi Keindahan Pulau Dewata
-        </p>
+      <div class="hero-overlay"></div>
 
-        <!-- Tombol besar dengan padding tambahan -->
-        <a href="#" class="btn btn-success btn-lg px-4">
-            Mulai Jelajahi
-        </a>
+      <div class="hero-content">
+        <div class="container">
+          <h1 class="display-4 fw-bold">Jelajahi Keindahan Bali</h1>
+          <p class="lead mb-4">
+            Temukan destinasi wisata terbaik dan nikmati pengalaman tak
+            terlupakan
+          </p>
+          <a href="#" class="btn btn-success btn-lg px-4">Mulai Jelajahi</a>
+        </div>
+      </div>
+    </section>
 
-    </div>
-</section>
+    <!-- ===================== DESTINATION SECTION ===================== -->
+    <section class="py-5">
+      <div class="container">
+        <div class="text-center mb-3">
+          <h3>Temukan Destinasi Terbaikmu</h3>
+        </div>
 
+        <div class="d-flex align-items-center">
+          <hr class="flex-grow-1" />
+          <h1 class="mx-4 mb-0 fw-bold">Bali Menanti</h1>
+          <hr class="flex-grow-1" />
+        </div>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <div class="row align-items-stretch mt-3 g-5">
+          <!-- Kolom Map -->
+          <div class="col-lg-6 mb-4">
+            <div class="map-container rounded-4 overflow-hidden shadow-sm">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d505145.87575404724!2d114.74191526007205!3d-8.455333464905236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd141d3e8100fa1%3A0x24910fb14b24e690!2sBali!5e0!3m2!1sid!2sid!4v1771470671592!5m2!1sid!2sid"
+                width="600"
+                height="530"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
 
-</body>
+          <!-- Kolom Spotlight -->
+          <div class="col-lg-6">
+            <h2 class="mb-3">Spotlight</h2>
+            <p>
+              Rasakan pesona Bali melalui keindahan pantai berpasir putih, sawah
+              terasering yang hijau, serta budaya dan tradisi yang mendunia.
+              Pulau Dewata menawarkan perpaduan sempurna antara alam,
+              spiritualitas, dan keramahan masyarakatnya.
+            </p>
+            <div
+              id="spotlightCarousel"
+              class="carousel slide mt-4"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner rounded-4 overflow-hidden shadow-sm">
+                <div class="carousel-item active">
+                  <img
+                    src="asset/img/foto1.jpg"
+                    class="carousel-img"
+                    alt="Bali 1"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="asset/img/foto2.jpg"
+                    class="carousel-img"
+                    alt="Bali 2"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="asset/img/foto3.jpg"
+                    class="carousel-img"
+                    alt="Bali 3"
+                  />
+                </div>
+              </div>
+
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#spotlightCarousel"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#spotlightCarousel"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== KATEGORI SECTION ===================== -->
+    <section class="py-5">
+      <div class="container">
+        <div class="text-center mb-3">
+          <h3>Aktivitas Wisata</h3>
+          <h5 class="text-muted">
+            Berbagai aktivitas menarik yang bisa Anda lakukan selama berlibur
+          </h5>
+        </div>
+        <div class="row g-4 align-items-stretch">
+          <!-- Card 1 -->
+          <div class="col-md-4">
+            <div class="card card-custom h-100">
+              <img
+                src="https://source.unsplash.com/600x400/?diving"
+                class="card-img-top"
+                alt=""
+              />
+              <div class="card-body">
+                <h5 class="card-title">Wisata Alam</h5>
+                <p class="card-text">
+                  Nikmati keindahan alam Bali seperti Air Terjun Tegenungan,
+                  Danau Batur, dan hamparan sawah terasering Ubud yang memukau.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-md-4">
+            <div class="card card-custom h-100">
+              <img
+                src="https://source.unsplash.com/600x400/?mountain"
+                class="card-img-top"
+                alt=""
+              />
+              <div class="card-body">
+                <h5 class="card-title">Wisata Budaya</h5>
+                <p class="card-text">
+                  Temukan tradisi, adat istiadat, dan warisan budaya lokal yang
+                  kaya akan sejarah dan makna.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-md-4">
+            <div class="card card-custom h-100">
+              <img
+                src="https://source.unsplash.com/600x400/?culture"
+                class="card-img-top"
+                alt=""
+              />
+              <div class="card-body">
+                <h5 class="card-title">Wisata Bahari</h5>
+                <p class="card-text">
+                  Nikmati pesona pantai, laut biru, dan kehidupan bawah laut
+                  yang menakjubkan.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="col-md-4">
+            <div class="card card-custom h-100">
+              <img
+                src="https://source.unsplash.com/600x400/?food"
+                class="card-img-top"
+                alt=""
+              />
+              <div class="card-body">
+                <h5 class="card-title">Wisata Edukasi</h5>
+                <p class="card-text">
+                  Kunjungi destinasi edukatif yang memberikan pengalaman belajar
+                  yang seru dan inspiratif.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="col-md-4">
+            <div class="card card-custom h-100">
+              <img
+                src="https://source.unsplash.com/600x400/?beach"
+                class="card-img-top"
+                alt=""
+              />
+              <div class="card-body">
+                <h5 class="card-title">Wisata Rekreasi</h5>
+                <p class="card-text">
+                  Habiskan waktu santai bersama keluarga dengan berbagai pilihan
+                  tempat hiburan menarik.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="col-md-4">
+            <div class="card card-custom h-100">
+              <img
+                src="https://source.unsplash.com/600x400/?forest"
+                class="card-img-top"
+                alt=""
+              />
+              <div class="card-body">
+                <h5 class="card-title">Wisata Belanja</h5>
+                <p class="card-text">
+                  Nikmati pengalaman berbelanja mulai dari pasar tradisional
+                  hingga pusat perbelanjaan modern dengan suasana khas Pulau
+                  Dewata.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT US SECTION ===================== -->
+    <!-- <section class="py-5 mt-5">
+      <div class="container">
+        <div class="text-center mb-3">
+          <h3>Aktivitas Wisata</h3>
+          <h5 class="text-muted">Berbagai aktivitas menarik yang bisa Anda lakukan selama berlibur</h5>
+        </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Footer Bootstrap -->
+    <footer class="bg-light py-5">
+      <div class="container">
+        <div class="row">
+          <!-- Logo dan Nama Website -->
+          <div class="col-md-3 mb-4 d-flex align-items-center">
+            <span class="fw-bold text-success fs-3">Bali Tourism</span>
+          </div>
+
+          <!-- Menu Links -->
+          <div class="col-md-2 mb-4">
+            <h5>Web Kami</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-decoration-none text-dark"
+                  >Explore Pariwisata</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-2 mb-4">
+            <h5>Informasi</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-decoration-none text-dark"
+                  >Tentang Kami</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-dark">Credit</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Kontak -->
+          <div class="col-md-3 mb-4">
+            <h5>Hubungi Kami</h5>
+            <p class="mb-0">
+              📞 0812-1000-0000<br />
+              ✉️
+              <a
+                href="mailto:info@web.com"
+                class="text-decoration-underline text-dark"
+                >info@web.com</a
+              >
+            </p>
+          </div>
+
+          <!-- Sosial Media -->
+          <div class="col-md-2 mb-4">
+            <h5>Sosial Media</h5>
+            <ul class="list-unstyled d-flex flex-row gap-4 align-items-start">
+              <li class="mb-2">
+                <a href="#" class="text-dark">
+                  <i class="fa-brands fa-instagram fa-lg"></i>
+                </a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-dark">
+                  <i class="fa-brands fa-x-twitter fa-lg"></i>
+                </a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-dark">
+                  <i class="fa-brands fa-tiktok fa-lg"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>

@@ -1,16 +1,1 @@
-/* ================= HERO SECTION ================= */
-
-.hero-section {
-  height: 90vh; /* tinggi 90% layar */
-
-  /* 
-       linear-gradient = overlay gelap
-       supaya teks putih tetap terbaca
-    */
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../asset/img/bali.jpg");
-
-  background-size: cover; /* gambar memenuhi layar */
-  background-position: center; /* posisi di tengah */
-}
+/* sumpil css nya ga ke panggil pdhl url nya udh bener siapapun tolong pindahin css di index nya kesini mauk btl sdh ak ni */
