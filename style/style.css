@@ -1,7 +1,7 @@
 /* ================= HERO SECTION ================= */
 
 .hero-section {
-  height: 90vh; /* tinggi 90% layar */
+  height: 100vh; /* tinggi 100% layar */
 
   /* 
        linear-gradient = overlay gelap
@@ -13,4 +13,31 @@
 
   background-size: cover; /* gambar memenuhi layar */
   background-position: center; /* posisi di tengah */
+}
+
+.navbar {
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+  background: transparent;
+  transition: 0.3s ease;
+}
+
+.navbar:hover {
+  background: white;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.navbar .nav-link,
+.navbar {
+  color: white !important;
+  transition: 0.3s;
+}
+
+.navbar:hover .nav-link,
+.navbar:hover {
+  color: black !important;
 }
