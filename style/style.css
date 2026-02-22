@@ -1,7 +1,6 @@
 /* ================= HERO SECTION ================= */
-
 .hero-section {
-  height: 100vh; /* tinggi 100% layar */
+  height: 100vh; 
 
   /* 
        linear-gradient = overlay gelap
@@ -11,8 +10,8 @@
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../asset/img/bali.jpg");
 
-  background-size: cover; /* gambar memenuhi layar */
-  background-position: center; /* posisi di tengah */
+  background-size: cover;
+  background-position: center;
 }
 
 .hero-section .carousel-inner,
@@ -51,6 +50,7 @@
   }
 }
 
+/* Navbar section */
 .navbar {
   position: absolute;
   width: 100%;
@@ -79,9 +79,9 @@
 }
 
 .card-img-top {
-  height: 250px; /* samakan tinggi semua gambar */
-  object-fit: cover; /* biar tidak gepeng */
+  height: 250px;
+  object-fit: cover;
 }
 
-/* sumpil css nya ga ke panggil pdhl url nya udh bener siapapun tolong pindahin css di index nya kesini mauk btl sdh ak ni */
-/* Karena di html mu banyak yang ke double + ketimpa -Jeki */
+
+

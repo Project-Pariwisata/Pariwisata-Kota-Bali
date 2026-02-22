@@ -1,0 +1,50 @@
+/* ================= HERO BACKGROUND ================= */
+
+.hero-section {
+    min-height: 100vh; /* Full screen height */
+    background: 
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), /* Overlay */
+        url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e'); /* Ganti dengan gambar Bali */
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ================= GRADIENT TEXT ================= */
+
+.gradient-text {
+    background: linear-gradient(45deg, #ff7b00, #ff00c8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ================= CUSTOM BUTTON ================= */
+
+.btn-gradient {
+    background: linear-gradient(45deg, #ff7b00, #ff00c8);
+    border: none;
+    border-radius: 50px;
+    transition: 0.3s ease;
+}
+
+.btn-gradient:hover {
+    opacity: 0.85;
+}
+
+.navbar {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+
+/* Spacing supaya hero tidak ketutup navbar */
+/* body {
+    padding-top: 70px;
+} */
+
+.badge {
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+}
