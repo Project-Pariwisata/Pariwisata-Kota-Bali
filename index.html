@@ -1,113 +1,333 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pariwisata Kota Bali</title>
 
     <!-- Bootstrap CSS dan JS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <link rel="stylesheet" href="../style/style.css">
-</head>
+    <link rel="stylesheet" href="style/style.css" />
+    <!-- Font Awesome untuk Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
 
-<body>
-
+  <body>
     <!-- ================= NAVBAR ================= -->
     <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid px-5">
+      <div class="container-fluid px-5">
+        <p class="navbar-brand fw-bold text-success">Bali Tourism</p>
 
-            <p class="navbar-brand fw-bold text-success">
-                Bali Tourism
-            </p>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#destinasi">Kategori Wisata</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#kontak">About Us</a>
-                    </li>
-                </ul>
-            </div>
-
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#kategori">Kategori Wisata</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#kontak">About Us</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
-
     <!-- ================= HERO SECTION ================= -->
-    <section id="home" class="hero-section d-flex align-items-center text-white text-center">
-        <div class="container">
-            <h1 class="display-4 fw-bold">
-                Welcome to Bali
-            </h1>
+    <section
+      id="home"
+      class="hero-section d-flex align-items-center text-white text-center"
+    >
+      <div class="container">
+        <h1 class="display-4 fw-bold">Welcome to Bali</h1>
 
-            <p class="lead mb-4">
-                Jelajahi Keindahan Pulau Dewata
-            </p>
+        <p class="lead mb-4">Jelajahi Keindahan Pulau Dewata</p>
 
-            <a href="#destinasi" class="btn btn-success btn-lg px-4">
-                Mulai Jelajahi
-            </a>
-        </div>
+        <a href="#destinasi" class="btn btn-success btn-lg px-4">
+          Mulai Jelajahi
+        </a>
+      </div>
     </section>
-
 
     <!-- ================= DESTINASI ================= -->
     <section id="destinasi" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Destinasi Wisata</h2>
+      <div class="container">
+        <h2 class="text-center mb-4">Destinasi Wisata</h2>
 
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card shadow-sm">
-                        <img src="../asset/img/pantai.jpg" class="card-img-top" alt="Pantai">
-                        <div class="card-body">
-                            <h5 class="card-title">Pantai Kuta</h5>
-                            <p class="card-text">Pantai terkenal dengan sunset yang indah.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-4">
-                    <div class="card shadow-sm">
-                        <img src="../asset/img/pura1.jpg" class="card-img-top" alt="Pura">
-                        <div class="card-body">
-                            <h5 class="card-title">Pura Tanah Lot</h5>
-                            <p class="card-text">Pura ikonik yang berdiri di atas batu karang.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-4">
-                    <div class="card shadow-sm">
-                        <img src="../asset/img/ubud.jpg" class="card-img-top" alt="Ubud">
-                        <div class="card-body">
-                            <h5 class="card-title">Ubud</h5>
-                            <p class="card-text">Pusat seni dan budaya Bali.</p>
-                        </div>
-                    </div>
-                </div>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="card card-destinasi shadow-sm">
+              <img
+                src="asset/img/pantai.jpg"
+                class="card-img-top"
+                alt="Pantai"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Pantai Kuta</h5>
+                <p class="card-text">
+                  Pantai terkenal dengan sunset yang indah.
+                </p>
+              </div>
             </div>
+          </div>
+
+          <div class="col-md-4 mb-4">
+            <div class="card card-destinasi shadow-sm">
+              <img src="asset/img/pura1.jpg" class="card-img-top" alt="Pura" />
+              <div class="card-body">
+                <h5 class="card-title">Pura Tanah Lot</h5>
+                <p class="card-text">
+                  Pura ikonik yang berdiri di atas batu karang.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4">
+            <div class="card card-destinasi shadow-sm">
+              <img src="asset/img/ubud.jpg" class="card-img-top" alt="Ubud" />
+              <div class="card-body">
+                <h5 class="card-title">Ubud</h5>
+                <p class="card-text">Pusat seni dan budaya Bali.</p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
+    <!-- ================= KATEGORI ================= -->
+    <section id="kategori" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Kategori Wisata</h2>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="kategori-card">
+              <div class="kategori-icon">
+                <i class="fas fa-mountain"></i>
+              </div>
+              <h4 class="kategori-title">Wisata Alam</h4>
+              <p class="kategori-text">
+                Nikmati keindahan alam Bali dari sawah terasering, air terjun,
+                hingga perbukitan hijau. Suasana asri dan udara segar siap
+                menyegarkan liburan Anda.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="kategori-card">
+              <div class="kategori-icon">
+                <i class="fas fa-gopuram"></i>
+              </div>
+              <h4 class="kategori-title">Wisata Budaya</h4>
+              <p class="kategori-text">
+                Jelajahi pura megah, tarian tradisional, dan upacara adat yang
+                sakral. Budaya Bali yang kaya tetap lestari dan memikat
+                wisatawan.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="kategori-card">
+              <div class="kategori-icon">
+                <i class="fa-solid fa-anchor"></i>
+              </div>
+              <h4 class="kategori-title">Wisata Bahari</h4>
+              <p class="kategori-text">
+                Temukan pantai eksotis dengan pasir putih dan laut biru jernih.
+                Nikmati snorkeling, diving, atau sunset yang menawan.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="kategori-card">
+              <div class="kategori-icon">
+                <i class="fas fa-palette"></i>
+              </div>
+              <h4 class="kategori-title">Wisata Edukasi</h4>
+              <p class="kategori-text">
+                Pelajari seni dan kerajinan khas Bali langsung dari ahlinya.
+                Dapatkan pengalaman budaya yang edukatif dan berkesan.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="kategori-card">
+              <div class="kategori-icon">
+                <i class="fas fa-person-hiking"></i>
+              </div>
+              <h4 class="kategori-title">Wisata Rekreasi</h4>
+              <p class="kategori-text">
+                Rasakan keseruan taman hiburan dan wisata petualangan seru.
+                Cocok untuk liburan keluarga maupun bersama teman.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="kategori-card">
+              <div class="kategori-icon">
+                <i class="fas fa-utensils"></i>
+              </div>
+              <h4 class="kategori-title">Wisata Belanja</h4>
+              <p class="kategori-text">
+                Berburu oleh-oleh khas dan cicipi kuliner tradisional Bali.
+                Rasakan perpaduan cita rasa dan budaya yang autentik.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT US ================= -->
+    <section id="kontak" class="about-section py-5">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <!-- Kolom Gambar -->
+          <div class="col-lg-5">
+            <div class="about-image-wrapper">
+              <img
+                src="asset/img/pura2.jpg"
+                alt="About Bali Tourism"
+                class="img-fluid about-image"
+              />
+            </div>
+          </div>
+
+          <!-- Kolom Content -->
+          <div class="col-lg-7">
+            <div class="about-content">
+              <h2 class="about-title">Temukan Pesona Destinasi Impian Anda</h2>
+
+              <p class="about-paragraph">
+                Website ini menghadirkan informasi lengkap dan rekomendasi
+                destinasi wisata terbaik yang dapat menjadi referensi perjalanan
+                Anda. Mulai dari keindahan alam yang memukau, kekayaan budaya
+                yang unik, hingga kuliner khas yang menggugah selera, kami
+                menyajikan berbagai pilihan tempat menarik yang layak untuk
+                dijelajahi.
+              </p>
+
+              <p class="about-paragraph">
+                Melalui platform ini, kami juga menampilkan berbagai promosi dan
+                highlight destinasi unggulan untuk membantu Anda merencanakan
+                liburan dengan lebih mudah dan menyenangkan. Temukan inspirasi
+                perjalanan Anda dan wujudkan pengalaman wisata yang berkesan
+                bersama kami.
+              </p>
+
+              <div class="about-vision">
+                <div class="vision-icon">
+                  <i class="fas fa-globe"></i>
+                </div>
+                <div class="vision-content">
+                  <h4>Visi Kami</h4>
+                  <p>
+                    Menjadi platform informasi dan promosi destinasi wisata
+                    terpercaya yang menginspirasi masyarakat untuk menjelajahi
+                    keindahan alam, budaya, dan kekayaan lokal Indonesia.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- ================= FOOTER ================= -->
-    <footer id="kontak" class="bg-dark text-white text-center py-3">
-        <p class="mb-0">© 2026 Pariwisata Kota Bali | Project Kelompok</p>
+    <footer class="footer-section">
+      <div class="container">
+        <div class="footer-content">
+          <!-- Kolom 1: Tentang -->
+          <div class="footer-column">
+            <h4 class="footer-title">Bali Tourism</h4>
+            <p class="footer-description">
+              Temukan informasi dan promosi destinasi wisata terbaik. Jelajahi
+              keindahan alam, budaya, dan kuliner untuk pengalaman liburan yang
+              berkesan.
+            </p>
+            <div class="social-links">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Kolom 2: Tautan Cepat -->
+          <div class="footer-column">
+            <h4 class="footer-title">Tautan Cepat</h4>
+            <ul class="footer-links">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#destinasi">Destinasi</a></li>
+              <li><a href="#kategori">Kategori Wisata</a></li>
+              <li><a href="#kontak">About Us</a></li>
+            </ul>
+          </div>
+
+          <!-- Kolom 3: Layanan Kami -->
+          <div class="footer-column">
+            <h4 class="footer-title">Informasi</h4>
+            <ul class="footer-links">
+              <li><a href="#">Tentang Kami</a></li>
+              <li><a href="#">Credit</a></li>
+            </ul>
+          </div>
+
+          <!-- Kolom 4: Hubungi Kami -->
+          <div class="footer-column">
+            <h4 class="footer-title">Hubungi Kami</h4>
+            <div class="contact-info">
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Jl. Aminah Syukur, Bali<br />Indonesia</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <a href="tel:+62812345678">+62 000 111 222</a>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <a href="#">info@zailaniXIPPLG2.id</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 Bali Tourism. All rights reserved.</p>
+        </div>
+      </div>
     </footer>
-
-</body>
-
+  </body>
 </html>
