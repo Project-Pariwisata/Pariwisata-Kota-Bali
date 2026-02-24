@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pariwisata Kota Bali</title>
+
+    <!-- Bootstrap CSS dan JS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="style/style-destination.css" />
+    <!-- Font Awesome untuk Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid px-5">
+        <p class="navbar-brand fw-bold text-success">Bali Tourism</p>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#kategori">Kategori Wisata</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#kontak">About Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ================= HERO ================= -->
+    <section class="detail-hero">
+      <img
+        src="asset/img/pantai_diamond/pantai.jpg"
+        class="detail-hero-img"
+      />
+      <div class="detail-overlay"></div>
+
+      <div class="detail-hero-content">
+        <div class="container">
+          <h1 class="fw-bold">Pantai Diamond</h1>
+          <p class="location-text">
+            <i class="fas fa-location-dot me-2"></i>
+            Pejukutan, Kec. Nusa Penida, Kabupaten Klungkung, Bali
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DESKRIPSI ================= -->
+    <section class="detail-description">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <h3 class="fw-bold mb-4">Tentang Destinasi</h3>
+            <p class="text-muted">
+              Diamond Beach merupakan salah satu pantai paling ikonik di Nusa
+              Penida yang terkenal dengan tebing kapur tinggi berbentuk runcing
+              menyerupai permata. Dari atas tebing, pengunjung dapat menikmati
+              panorama laut biru yang luas berpadu dengan pasir putih yang
+              bersih dan alami. Pemandangan dramatis ini menjadikan Diamond
+              Beach sebagai salah satu spot foto favorit wisatawan karena
+              keindahannya yang begitu memukau dan eksotis.
+            </p>
+            <p class="text-muted">
+              Untuk mencapai bibir pantai, pengunjung harus menuruni anak tangga
+              yang dipahat langsung pada tebing. Perjalanan ini memang cukup
+              menantang, namun akan terbayar lunas dengan suasana pantai yang
+              masih asri dan relatif tenang. Ombak di kawasan ini cukup besar
+              sehingga wisatawan disarankan tetap berhati-hati saat bermain di
+              tepi pantai.
+            </p>
+            <p class="text-muted">
+              Keindahan alam yang masih alami, tebing megah, serta suasana yang
+              jauh dari keramaian menjadikan Diamond Beach destinasi yang
+              sempurna bagi pencinta alam dan fotografi. Tempat ini menawarkan
+              pengalaman liburan yang berbeda, di mana keindahan alam Bali
+              terasa lebih liar, murni, dan mempesona.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= GALERI MODERN GRID ================= -->
+    <section class="gallery-section">
+      <div class="container">
+        <h3 class="fw-bold mb-4 text-center">Galeri Foto</h3>
+
+        <div class="row g-3">
+          <div class="col-md-6">
+            <div class="ratio ratio-16x9">
+              <iframe
+                src="https://www.youtube.com/embed/7ywysp1nVdU"
+                title="Pantai Diamond"
+                allowfullscreen
+              >
+              </iframe>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="row g-3">
+              <div class="col-6">
+                <img
+                  src="asset/img/pantai_diamond/pantai2.jpg"
+                  alt="Pantai Diamond 2"
+                  class="gallery-thumb"
+                />
+              </div>
+              <div class="col-6">
+                <img
+                  src="asset/img/pantai_diamond/pantai3.jpg"
+                  alt="Pantai Diamond 3"
+                  class="gallery-thumb"
+                />
+              </div>
+              <div class="col-6">
+                <img
+                  src="asset/img/pantai_diamond/pantai4.jpg"
+                  alt="Pantai Diamond 4"
+                  class="gallery-thumb"
+                />
+              </div>
+              <div class="col-6">
+                <img
+                  src="asset/img/pantai_diamond/pantai5.jpg"
+                  alt="Pantai Diamond 5"
+                  class="gallery-thumb"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DESTINASI TERKAIT ================= -->
+    <section class="related-section">
+      <div class="container">
+        <h3 class="fw-bold text-center mb-5">Wisata Lainnya di Bali</h3>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="related-card-modern">
+              <img
+                src="asset/img/garuda_wisnu_kencana/gwk1.jpg"
+                alt="Garuda Wisnu Kencana"
+              />
+              <div class="related-body-modern">
+                <h6>Garuda Wisnu Kencana</h6>
+                <p class="text-muted small mb-3">
+                  Taman budaya ikonik dengan patung megah Dewa Wisnu yang
+                  menjadi simbol kebanggaan Bali.
+                </p>
+                <a href="#">Lihat Detail →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="related-card-modern">
+              <img src="asset/img/pura1.jpg" alt="Pura Tanah Lot" />
+              <div class="related-body-modern">
+                <h6>Pura Tanah Lot</h6>
+                <p class="text-muted small mb-3">
+                  Pura megah di atas batu karang dengan pemandangan matahari
+                  terbenam yang spektakuler.
+                </p>
+                <a href="#">Lihat Detail →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="related-card-modern">
+              <img src="asset/img/ubud.jpg" alt="Ubud" />
+              <div class="related-body-modern">
+                <h6>Ubud</h6>
+                <p class="text-muted small mb-3">
+                  Sawah terasering hijau yang indah dengan pemandangan alam yang
+                  menenangkan.
+                </p>
+                <a href="#">Lihat Detail →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer-section">
+      <div class="container">
+        <div class="footer-content">
+          <!-- Kolom 1: Tentang -->
+          <div class="footer-column">
+            <h4 class="footer-title">Bali Tourism</h4>
+            <p class="footer-description">
+              Temukan informasi dan promosi destinasi wisata terbaik. Jelajahi
+              keindahan alam, budaya, dan kuliner untuk pengalaman liburan yang
+              berkesan.
+            </p>
+            <div class="social-links">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Kolom 2: Tautan Cepat -->
+          <div class="footer-column">
+            <h4 class="footer-title">Tautan Cepat</h4>
+            <ul class="footer-links">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#destinasi">Destinasi</a></li>
+              <li><a href="#kategori">Kategori Wisata</a></li>
+              <li><a href="#kontak">About Us</a></li>
+            </ul>
+          </div>
+
+          <!-- Kolom 3: Layanan Kami -->
+          <div class="footer-column">
+            <h4 class="footer-title">Informasi</h4>
+            <ul class="footer-links">
+              <li><a href="#">Tentang Kami</a></li>
+              <li><a href="#">Credit</a></li>
+            </ul>
+          </div>
+
+          <!-- Kolom 4: Hubungi Kami -->
+          <div class="footer-column">
+            <h4 class="footer-title">Hubungi Kami</h4>
+            <div class="contact-info">
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Jl. Aminah Syukur, Bali<br />Indonesia</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <a href="tel:+62812345678">+62 000 111 222</a>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <a href="#">info@zailaniXIPPLG2.id</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 Bali Tourism. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

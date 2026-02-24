@@ -1,0 +1,387 @@
+/* ================= HERO SECTION ================= */
+.hero-section {
+  height: 100vh;
+
+  /* 
+       linear-gradient = overlay gelap
+       supaya teks putih tetap terbaca
+    */
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../asset/img/bali.jpg");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-section .carousel-inner,
+.hero-section .carousel-item {
+  height: 100%;
+}
+
+.hero-section .carousel-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.25));
+  z-index: 1;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 1.75rem;
+  }
+}
+
+/* Navbar section */
+.navbar {
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+  background: transparent;
+  transition: 0.3s ease;
+}
+
+.navbar:hover {
+  background: white;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.navbar .nav-link,
+.navbar {
+  color: white !important;
+  transition: 0.3s;
+}
+
+.navbar:hover .nav-link,
+.navbar:hover {
+  color: black !important;
+}
+
+.card-img-top {
+  height: 250px;
+  object-fit: cover;
+}
+
+/* ================= DETAIL HERO (MODERN) ================= */
+.detail-hero {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.detail-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.detail-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.6)
+  );
+}
+
+.detail-hero-content {
+  position: absolute;
+  bottom: 80px;
+  left: 0;
+  right: 0;
+  color: white;
+  z-index: 2;
+}
+
+.detail-hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.detail-location {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* ================= DESKRIPSI ================= */
+.detail-description {
+  padding: 5rem 0;
+}
+
+.detail-description h3 {
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.detail-description p {
+  color: #666;
+  line-height: 1.9;
+  font-size: 1rem;
+}
+
+/* ================= GALERI GRID MODERN ================= */
+.gallery-section {
+  padding: 5rem 0;
+  background: #f8f9fa;
+}
+
+.gallery-main {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.gallery-thumb {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 14px;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.gallery-thumb:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* ================= DESTINASI TERKAIT ================= */
+.related-section {
+  padding: 5rem 0;
+}
+
+.related-card-modern {
+  border-radius: 18px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  background: #fff;
+}
+
+.related-card-modern img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.related-card-modern:hover img {
+  transform: scale(1.08);
+}
+
+.related-card-modern:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.related-body-modern {
+  padding: 1.5rem;
+}
+
+.related-body-modern h6 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.related-body-modern p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.related-body-modern a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: #198754;
+  font-weight: 500;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+.related-body-modern a:hover {
+  color: #155938;
+  transform: translateX(5px);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .detail-hero {
+    height: 70vh;
+  }
+
+  .detail-hero h1 {
+    font-size: 2rem;
+  }
+
+  .gallery-main {
+    height: 280px;
+  }
+
+  .gallery-thumb {
+    height: 140px;
+  }
+}
+
+/* ================= FOOTER SECTION ================= */
+.footer-section {
+  background: linear-gradient(135deg, #1a1f3a, #2d3561);
+  color: #b0b9c9;
+  padding: 2rem 0 1rem;
+  margin-top: 3rem;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-title {
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.footer-description {
+  color: #b0b9c9;
+  line-height: 1.6;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.social-icon:hover {
+  background: #198754;
+  transform: translateY(-3px);
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: #b0b9c9;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  color: #198754;
+  transform: translateX(5px);
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.contact-item i {
+  color: #198754;
+  font-size: 1.2rem;
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+
+.contact-item span {
+  color: #b0b9c9;
+  line-height: 1.4;
+  font-size: 0.85rem;
+}
+
+.contact-item a {
+  color: #b0b9c9;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 0.85rem;
+}
+
+.contact-item a:hover {
+  color: #198754;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.25rem;
+  text-align: center;
+  color: #8a93a8;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-section {
+    padding: 1.5rem 0 1rem;
+    margin-top: 2rem;
+  }
+}
