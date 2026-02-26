@@ -1,0 +1,377 @@
+/* ================= HERO SECTION ================= */
+.hero-section {
+  height: 100vh;
+
+  /* 
+       linear-gradient = overlay gelap
+       supaya teks putih tetap terbaca
+    */
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../asset/img/bali.jpg");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-section .carousel-inner,
+.hero-section .carousel-item {
+  height: 100%;
+}
+
+.hero-section .carousel-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.25));
+  z-index: 1;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 1.75rem;
+  }
+}
+
+/* About Hero Section */
+.about-hero-section {
+  height: 50vh;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../asset/img/bali.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-hero-content {
+  text-align: center;
+}
+
+.about-hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.about-hero-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .about-hero-section {
+    height: 40vh;
+  }
+
+  .about-hero-title {
+    font-size: 2rem;
+  }
+
+  .about-hero-subtitle {
+    font-size: 1rem;
+  }
+}
+
+/* Navbar section */
+.navbar {
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+  background: transparent;
+  transition: 0.3s ease;
+}
+
+.navbar:hover {
+  background: white;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.navbar .nav-link,
+.navbar {
+  color: white !important;
+  transition: 0.3s;
+}
+
+.navbar:hover .nav-link,
+.navbar:hover {
+  color: black !important;
+}
+
+.card-img-top {
+  height: 250px;
+  object-fit: cover;
+}
+
+/* ================= ABOUT US SECTION ================= */
+.about-section {
+  background: #ffffff;
+}
+
+.about-image-wrapper {
+  position: relative;
+}
+
+.about-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  display: block;
+}
+
+.about-stats {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  background: linear-gradient(135deg, #198754, #155938);
+  color: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  min-width: 180px;
+}
+
+.stats-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1;
+}
+
+.stats-text {
+  font-size: 0.95rem;
+  margin: 0.5rem 0 0 0;
+  font-weight: 500;
+}
+
+.about-content {
+  padding-left: 1rem;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.about-paragraph {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+.about-vision {
+  display: flex;
+  gap: 1.5rem;
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+  border-left: 4px solid #198754;
+}
+
+.vision-icon {
+  font-size: 2rem;
+  color: #198754;
+  flex-shrink: 0;
+}
+
+.vision-content h4 {
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+.vision-content p {
+  color: #666;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 1.75rem;
+  }
+  
+  .about-image {
+    height: 300px;
+  }
+  
+  .about-stats {
+    position: static;
+    margin-top: 1rem;
+  }
+  
+  .about-content {
+    padding-left: 0;
+    margin-top: 2rem;
+  }
+}
+
+/* ================= FOOTER SECTION ================= */
+.footer-section {
+  background: linear-gradient(135deg, #1a1f3a, #2d3561);
+  color: #b0b9c9;
+  padding: 2rem 0 1rem;
+  margin-top: 3rem;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-title {
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.footer-description {
+  color: #b0b9c9;
+  line-height: 1.6;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.social-icon:hover {
+  background: #198754;
+  transform: translateY(-3px);
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: #b0b9c9;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  color: #198754;
+  transform: translateX(5px);
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.contact-item i {
+  color: #198754;
+  font-size: 1.2rem;
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+
+.contact-item span {
+  color: #b0b9c9;
+  line-height: 1.4;
+  font-size: 0.85rem;
+}
+
+.contact-item a {
+  color: #b0b9c9;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 0.85rem;
+}
+
+.contact-item a:hover {
+  color: #198754;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.25rem;
+  text-align: center;
+  color: #8a93a8;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-section {
+    padding: 1.5rem 0 1rem;
+    margin-top: 2rem;
+  }
+}
