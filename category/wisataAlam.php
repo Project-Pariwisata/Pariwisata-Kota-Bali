@@ -1,3 +1,17 @@
+<?php
+include '../config/connection.php';
+
+$filter = "";
+
+if (isset($_GET['sub_kategori']) && $_GET['sub_kategori'] != "") {
+    $id = $_GET['sub_kategori'];
+    $filter = "WHERE sub_kategori_id = $id";
+}
+
+$query = "SELECT * FROM wisata $filter";
+$result = mysqli_query($conn, $query);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -102,15 +116,19 @@
                             </div>
                         </div>
 
-                        <!-- DROPDOWN -->
-                        <div class="col-md-4">
-                            <select class="form-select">
-                                <option value="">Semua Jenis</option>
-                                <option value="gunung">Gunung</option>
-                                <option value="pantai">Pantai</option>
-                                <option value="air-terjun">Air Terjun</option>
-                            </select>
-                        </div>
+                        <form action="" method="GET">
+                            <!-- DROPDOWN -->
+                            <div class="col-md-4">
+                                <select name="sub_kategori" class="form-select" onchange="this.form.submit()">
+                                    <option value="">Semua Jenis</option>
+                                    <option value="1">Pantai</option>
+                                    <option value="2">Gunung</option>
+                                    <option value="3">Air Terjun</option>
+                                    <option value="4">Danau</option>
+                                    <option value="5">Hutan</option>
+                                </select>
+                            </div>
+                        </form>
 
                     </div>
                 </div>
@@ -118,18 +136,28 @@
 
             <div class="row g-4">
                 <!-- Contoh Kartu Destinasi -->
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <img src="../asset/img/pantai_diamond/pantai.jpg" class="card-img-top" alt="Pantai Diamond">
-                        <div class="card-body">
-                            <h5 class="card-title">Pantai Diamond</h5>
-                            <p class="card-text">
-                                Pantai Diamond di Nusa Penida menawarkan pasir putih, air jernih, dan tebing karst yang
-                                dramatis. Cocok untuk snorkeling, berenang, dan menikmati pemandangan alam yang memukau.
-                            </p>
+                <?php while ($row = mysqli_fetch_assoc($result)) { ?>
+
+                    <div class="col-md-4">
+                        <div class="card h-100">
+
+                            <!-- nanti kita bahas foto -->
+                            <img src="../asset/img/default.jpg" class="card-img-top">
+
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <?php echo $row['nama_wisata']; ?>
+                                </h5>
+
+                                <p class="card-text">
+                                    <?php echo $row['deskripsi']; ?>
+                                </p>
+                            </div>
+
                         </div>
                     </div>
-                </div>
+
+                <?php } ?>
             </div>
         </div>
     </section>
