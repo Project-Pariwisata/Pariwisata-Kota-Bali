@@ -86,20 +86,32 @@
         <div class="container">
             <h2 class="text-center mb-4">Destinasi Wisata Alam Terpopuler</h2>
 
-            <div class="row g-2 mb-4">
-                <div class="col-md-3">
-                    <div class="input-group">
-                        <span class="input-group-text">
-                            <i class="bi bi-search"></i>
-                        </span>
-                        <input type="text" class="form-control" id="searchInput" placeholder="Cari destinasi...">
+            <div class="row justify-content-center mb-4">
 
-                        <select name="jenisWisata" id="jenisWisata" class="form-select d-flex justify-content-end">
-                            <option value="">Semua Jenis</option>
-                            <option value="gunung">Gunung</option>
-                            <option value="pantai">Pantai</option>
-                            <option value="air-terjun">Air Terjun</option>
-                        </select>
+                <!-- Ini pembungkus supaya tidak full width -->
+                <div class="col-md-8 col-lg-6">
+                    <div class="row g-2 align-items-center">
+
+                        <!-- SEARCH -->
+                        <div class="col-md-6">
+                            <div class="input-group">
+                                <span class="input-group-text">
+                                    <i class="bi bi-search"></i>
+                                </span>
+                                <input type="text" class="form-control" placeholder="Cari destinasi...">
+                            </div>
+                        </div>
+
+                        <!-- DROPDOWN -->
+                        <div class="col-md-4">
+                            <select class="form-select">
+                                <option value="">Semua Jenis</option>
+                                <option value="gunung">Gunung</option>
+                                <option value="pantai">Pantai</option>
+                                <option value="air-terjun">Air Terjun</option>
+                            </select>
+                        </div>
+
                     </div>
                 </div>
             </div>
