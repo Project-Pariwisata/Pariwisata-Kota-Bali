@@ -1,15 +1,8 @@
 <?php
 include '../config/connection.php';
+include '../config/app.php';
 
-$filter = "";
-
-if (isset($_GET['sub_kategori']) && $_GET['sub_kategori'] != "") {
-    $id = $_GET['sub_kategori'];
-    $filter = "WHERE sub_kategori_id = $id";
-}
-
-$query = "SELECT * FROM wisata $filter";
-$result = mysqli_query($conn, $query);
+$result = getWisata($conn);
 ?>
 
 <!DOCTYPE html>
@@ -104,63 +97,79 @@ $result = mysqli_query($conn, $query);
 
                 <!-- Ini pembungkus supaya tidak full width -->
                 <div class="col-md-8 col-lg-6">
-                    <div class="row g-2 align-items-center">
 
-                        <!-- SEARCH -->
-                        <div class="col-md-6">
-                            <div class="input-group">
-                                <span class="input-group-text">
-                                    <i class="bi bi-search"></i>
-                                </span>
-                                <input type="text" class="form-control" placeholder="Cari destinasi...">
+                    <form action="" method="GET">
+                        <div class="row g-2 align-items-center">
+
+                            <!-- SEARCH -->
+                            <div class="col-md-6">
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <i class="bi bi-search"></i>
+                                    </span>
+                                    <input type="text" name="search" class="form-control" placeholder="Cari destinasi...">
+                                </div>
                             </div>
-                        </div>
 
-                        <form action="" method="GET">
                             <!-- DROPDOWN -->
                             <div class="col-md-4">
                                 <select name="sub_kategori" class="form-select" onchange="this.form.submit()">
                                     <option value="">Semua Jenis</option>
-                                    <option value="1">Pantai</option>
-                                    <option value="2">Gunung</option>
-                                    <option value="3">Air Terjun</option>
-                                    <option value="4">Danau</option>
-                                    <option value="5">Hutan</option>
+                                    <option value="1" <?php if (isset($_GET['sub_kategori']) && $_GET['sub_kategori'] == 1) echo "selected"; ?>>Pantai</option>
+                                    <option value="2" <?php if (isset($_GET['sub_kategori']) && $_GET['sub_kategori'] == 2) echo "selected"; ?>>Gunung</option>
+                                    <option value="3" <?php if (isset($_GET['sub_kategori']) && $_GET['sub_kategori'] == 3) echo "selected"; ?>>Air Terjun</option>
+                                    <option value="4" <?php if (isset($_GET['sub_kategori']) && $_GET['sub_kategori'] == 4) echo "selected"; ?>>Danau</option>
+                                    <option value="5" <?php if (isset($_GET['sub_kategori']) && $_GET['sub_kategori'] == 5) echo "selected"; ?>>Hutan</option>
                                 </select>
+
                             </div>
-                        </form>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <!-- Contoh Kartu Destinasi -->
+            <?php while ($row = mysqli_fetch_assoc($result)) { ?>
+
+                <div class="col-md-4">
+                    <div class="card h-100">
+
+                        <!-- nanti kita bahas foto -->
+                        <img src="../asset/img/default.jpg" class="card-img-top">
+
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <?php echo $row['nama_wisata']; ?>
+                            </h5>
+
+                            <p class="card-text">
+                                <?php echo $row['deskripsi']; ?>
+                            </p>
+                        </div>
 
                     </div>
                 </div>
-            </div>
 
-            <div class="row g-4">
-                <!-- Contoh Kartu Destinasi -->
-                <?php while ($row = mysqli_fetch_assoc($result)) { ?>
-
-                    <div class="col-md-4">
-                        <div class="card h-100">
-
-                            <!-- nanti kita bahas foto -->
-                            <img src="../asset/img/default.jpg" class="card-img-top">
-
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    <?php echo $row['nama_wisata']; ?>
-                                </h5>
-
-                                <p class="card-text">
-                                    <?php echo $row['deskripsi']; ?>
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-
-                <?php } ?>
-            </div>
+            <?php } ?>
+        </div>
         </div>
     </section>
+
+
+    <!-- Java Script untuk membuat navbar berubah saat di scroll -->
+    <script>
+        window.addEventListener("scroll", function() {
+            const navbar = document.querySelector(".navbar");
+
+            if (window.scrollY > 50) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        });
+    </script>
 
 </body>
 
