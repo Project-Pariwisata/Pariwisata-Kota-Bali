@@ -5,3 +5,7 @@
 ## Kategori Wisata Alam
 
 - eh itu ada yang gak sempat ku baikin, aku mau dropdownnya di kanan. tolong baikin kalau sempat, aku mau jalan, nanti kalau sempat aku yang baikin.
+
+## papayab mamaji
+
+- lah kata gua mah lu diam aja
